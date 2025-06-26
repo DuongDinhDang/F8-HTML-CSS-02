@@ -37,6 +37,24 @@ a {
 
 .btn:hover {
     opacity: 0.9;
+    cursor: pointer;
+}
+
+.heading {
+    color: #171100;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+.heading.lv1 {
+    font-size: 5.8rem;
+    line-height: 1.17;
+}
+
+.heading.lv2 {
+    font-size: 3.8rem;
+    line-height: 1.26;
 }
 
 .main-content {
@@ -44,6 +62,13 @@ a {
     max-width: calc(100% - 48px);
     margin-left: auto;
     margin-right: auto;
+}
+
+.line-clamp {
+    display: -webkit-box;
+    -webkit-line-clamp: var(--line-clamp, 1);
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
 /* Header */
@@ -191,15 +216,6 @@ a {
     padding: 64px 0 0 130px;
 }
 
-.hero .heading {
-    color: #171100;
-    font-family: var(--font-heading);
-    font-size: 5.8rem;
-    font-weight: 700;
-    line-height: 1.17;
-    letter-spacing: -0.02em;
-}
-
 .hero .desc {
     margin-top: 22px;
     color: #5f5b53;
@@ -258,4 +274,127 @@ a {
     font-size: 4.4rem;
     font-weight: 700;
     line-height: 1.23; /* 122.727% */
+}
+
+/* Popular */
+.popular {
+    padding: 65px 0;
+    margin-top: 135px;
+}
+
+.popular-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.popular-top .desc {
+    margin-top: 16px;
+    width: 458px;
+    color: #5f5b53;
+    font-size: 1.8rem;
+    line-height: 1.67; /* 166.667% */
+}
+
+.popular-top .controls {
+    display: flex;
+    gap: 18px;
+}
+
+.popular-top .control-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    color: var(--primary-color);
+    border-radius: 50%;
+    border: 1px solid var(--primary-color);
+    background: transparent;
+}
+
+.popular-top .control-btn:hover {
+    background: var(--primary-color);
+    color: #fff;
+    cursor: pointer;
+}
+
+.course-list {
+    display: flex;
+    gap: 30px;
+    margin-top: 55px;
+}
+
+.popular .course-item {
+    flex: 1;
+    border: 1px solid #e2dfda;
+    border-radius: 12px;
+    background: #fff;
+}
+
+.popular .course-item:hover {
+    border-color: transparent;
+    box-shadow: 0px 18px 36px rgba(0, 0, 0, 0.05);
+}
+
+.popular .course-item .thumb {
+    width: calc(100% + 2px);
+    height: 278px;
+    margin: -1px;
+    object-fit: cover;
+    border-radius: 12px 12px 0px 0px;
+}
+
+.popular .course-item .info {
+    padding: 16px 22px 22px;
+}
+
+.popular .course-item .rating,
+.popular .course-item .foot,
+.popular .course-item .head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.popular .course-item .title a {
+    padding-right: 6px;
+    color: #171100;
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.67;
+}
+
+.popular .value {
+    margin-left: 6px;
+    color: #fea31b;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.75;
+}
+
+.popular .course-item .desc {
+    color: #5f5b53;
+    font-size: 1.4rem;
+    line-height: 1.86;
+}
+
+.popular .course-item .foot {
+    margin-top: 12px;
+}
+
+.popular .course-item .price {
+    color: #171100;
+    font-size: 1.8;
+    font-weight: 600;
+    line-height: 1.67;
+}
+
+.popular .course-item .book-btn {
+    border: none;
+}
+
+.popular .course-item .book-btn:hover {
+    background: var(--primary-color);
+    color: #fff;
 }
